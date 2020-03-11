@@ -1,4 +1,4 @@
-package ex4_1;
+	package ex4_1;
 
 import java.util.Date;
 import java.time.LocalDate;
@@ -15,12 +15,12 @@ public class personne extends composite{
 	private final String departement;	
 	
 	public static class builder{
-			final String prenom;
-			final String nom;
-			final LocalDate date_de_naissance;
-			final List<String> num_tel;
-			final List<personne> subordoné;
-			final String departement;	
+			private String prenom;
+			private String nom;
+			private LocalDate date_de_naissance;
+			private List<String> num_tel;
+			private List<personne> subordoné;
+			private String departement;	
 			
 		
 		public builder() {
@@ -40,6 +40,14 @@ public class personne extends composite{
 			this.subordoné=subordoné;
 			this.departement=departement;	
 			
+		}
+		public builder nom(String nom) {
+			this.nom=nom;
+			return this;
+		}
+		public builder prenom(String prenom) {
+			this.prenom=prenom;
+			return this;
 		}
 		public personne build() {
 			return new personne(this);

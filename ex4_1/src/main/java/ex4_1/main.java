@@ -7,6 +7,8 @@ public class main {
 		// TODO Auto-generated method stub
 
 		// afficher
+		personne p=new personne.builder("", "prenom", null, null, "placard").build();
+		System.out.println(p.getPrenom());
 	}
 
 }
